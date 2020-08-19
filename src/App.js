@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Counter from "./components/Counter";
 
 function App() {
   // passing ES6 style functions as props (you don't need "this" keyword, but in regular function expressions you do)
@@ -22,6 +23,8 @@ function App() {
         nums={[10, 12]}
         lambdaFunc={(a, b) => a + b}
       />
+      <Counter initialCount={33} />
+      <Counter initialCount={0} />
     </div>
   );
 }
