@@ -26,9 +26,10 @@ class ImageSlider extends Component {
   render() {
     return (
       <div>
+        <h1>These are the Cornerstone pieces of the 49ers:</h1>
         <button onClick={this.handlePrevious}>Previous</button>
         <img
-          style={{ width: 500, height: 500, borderRadius: 15, margin: 15 }}
+          style={{ width: 400, height: 400, borderRadius: 15, margin: 15 }}
           alt="Jimmy G"
           src={this.state.images[this.state.idx]}
         />
