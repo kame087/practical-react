@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 // You can use ThemeProvider to add a theme to the entire component
 
@@ -9,7 +9,7 @@ const theme = {
 };
 
 const Button = styled.button`
-  font-family: ${(props) => props.theme.font};
+  
   font-size: 1.3rem;
   border: none;
   border-radius: 5px;
@@ -26,7 +26,13 @@ const Button = styled.button`
 
 const H1 = styled.h1`
   font-size: 3rem;
-  font-family: ${(props) => props.theme.font};
+`;
+
+const Image = styled.img`
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  margin: 15px;
 `;
 
 class ImageSlider extends Component {
@@ -58,11 +64,7 @@ class ImageSlider extends Component {
         <div>
           <H1>Cornerstone pieces of the 49ers</H1>
           <Button onClick={this.handlePrevious}>Previous</Button>
-          <img
-            style={{ width: 400, height: 400, borderRadius: 15, margin: 15 }}
-            alt="Jimmy G"
-            src={this.state.images[this.state.idx]}
-          />
+          <Image alt="Jimmy G" src={this.state.images[this.state.idx]} />
           <Button onClick={this.handleNext}>Next</Button>
         </div>
       </ThemeProvider>
