@@ -1,4 +1,33 @@
 import React, { Component } from "react";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+
+// You can use ThemeProvider to add a theme to the entire component
+
+const theme = {
+  primary: "red",
+  secondary: "gold",
+};
+
+const Button = styled.button`
+  font-family: ${(props) => props.theme.font};
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 7px 10px;
+  /* background: ${(props) => (props.primary ? "red" : "black")}; */
+  background: ${(props) => props.theme.primary};
+  color: white;
+  &:hover {
+    background: ${(props) => props.theme.secondary};
+    color: black;
+  }
+`;
+
+const H1 = styled.h1`
+  font-size: 3rem;
+  font-family: ${(props) => props.theme.font};
+`;
 
 class ImageSlider extends Component {
   state = {
@@ -25,16 +54,18 @@ class ImageSlider extends Component {
 
   render() {
     return (
-      <div>
-        <h1>These are the Cornerstone pieces of the 49ers:</h1>
-        <button onClick={this.handlePrevious}>Previous</button>
-        <img
-          style={{ width: 400, height: 400, borderRadius: 15, margin: 15 }}
-          alt="Jimmy G"
-          src={this.state.images[this.state.idx]}
-        />
-        <button onClick={this.handleNext}>Next</button>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div>
+          <H1>Cornerstone pieces of the 49ers</H1>
+          <Button onClick={this.handlePrevious}>Previous</Button>
+          <img
+            style={{ width: 400, height: 400, borderRadius: 15, margin: 15 }}
+            alt="Jimmy G"
+            src={this.state.images[this.state.idx]}
+          />
+          <Button onClick={this.handleNext}>Next</Button>
+        </div>
+      </ThemeProvider>
     );
   }
 }
