@@ -3,9 +3,9 @@ import GlobalStyle from "./globalStyles";
 
 import "./App.css";
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Body from "./components/Body";
-import Counter from "./components/Counter";
+// import Counter from "./components/Counter";
 import ImageSlider from "./components/ImageSlider";
 
 function App() {
