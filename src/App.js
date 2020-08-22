@@ -4,7 +4,7 @@ import GlobalStyle from "./globalStyles";
 import "./App.css";
 
 // import Header from "./components/Header";
-import Body from "./components/Body";
+// import Body from "./components/Body";
 // import Counter from "./components/Counter";
 import ImageSlider from "./components/ImageSlider";
 
@@ -21,12 +21,12 @@ function App() {
           b: 6,
         }}
       /> */}
-      <Body
+      {/* <Body
         family={["Kevin", "Sophia", "Sage", "Judah"]}
         myFunc={add}
         nums={[10, 12]}
         lambdaFunc={(a, b) => a + b}
-      />
+      /> */}
       {/* <Counter initialCount={33} /> */}
       <ImageSlider />
     </div>

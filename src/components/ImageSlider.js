@@ -1,39 +1,17 @@
 import React, { Component } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+
+import Button from "../elements/Button";
+import H1 from "../elements/H1";
+import Image from "../elements/Image";
 
 // You can use ThemeProvider to add a theme to the entire component
 
 const theme = {
   primary: "red",
   secondary: "gold",
+  alert: "yellow",
 };
-
-const Button = styled.button`
-  
-  font-size: 1.3rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 7px 10px;
-  /* background: ${(props) => (props.primary ? "red" : "black")}; */
-  background: ${(props) => props.theme.primary};
-  color: white;
-  &:hover {
-    background: ${(props) => props.theme.secondary};
-    color: black;
-  }
-`;
-
-const H1 = styled.h1`
-  font-size: 3rem;
-`;
-
-const Image = styled.img`
-  width: 400px;
-  height: 400px;
-  border-radius: 15px;
-  margin: 15px;
-`;
 
 class ImageSlider extends Component {
   state = {
@@ -63,9 +41,13 @@ class ImageSlider extends Component {
       <ThemeProvider theme={theme}>
         <div>
           <H1>Cornerstone pieces of the 49ers</H1>
-          <Button onClick={this.handlePrevious}>Previous</Button>
+          <Button color="primary" onClick={this.handlePrevious}>
+            Previous
+          </Button>
           <Image alt="Jimmy G" src={this.state.images[this.state.idx]} />
-          <Button onClick={this.handleNext}>Next</Button>
+          <Button color="primary" onClick={this.handleNext}>
+            Next
+          </Button>
         </div>
       </ThemeProvider>
     );
