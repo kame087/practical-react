@@ -19,7 +19,7 @@ class ImageSlider extends Component {
       "https://cdn.vox-cdn.com/thumbor/jL5dWxjiE31pge69711ibkMUb0g=/0x0:4142x2761/1200x800/filters:focal(1734x344:2396x1006)/cdn.vox-cdn.com/uploads/chorus_image/image/66236609/usa_today_13966081.0.jpg",
       "https://www.sfexaminer.com/wp-content/uploads/2019/11/19516497_web1_George-Kittle-Arizona.jpg",
       "https://cdn.vox-cdn.com/thumbor/2niMyBa-l4LmhG0wZIR0pYREBwU=/0x0:3456x2804/1200x800/filters:focal(912x1556:1464x2108)/cdn.vox-cdn.com/uploads/chorus_image/image/65381310/1175431334.jpg.0.jpg",
-      "https://lh3.googleusercontent.com/proxy/lvechizFdcgA0V_adDUoxuv2YIsAyZrmFeHD_unuOHKNTNeVhb0ddUKRy1OD3BBCaATaQy8ikW4Yo2fkxy8y2GLvH09N3LNzYFQu-ZroZIYSbKtsqO6UFq5goOTTccPVJFJBObszzo4BNJFXnd5xyhEpHiwrJbZwyboBLNE9ZTUW5hvF4LZ3u-P7zTzI1qHNEcgZCc_utby2Cd1tLHh0f9DczzuOzLlBpe85Z5bhtNYz",
+      "https://img.bleacherreport.net/img/images/photos/003/854/641/hi-res-6da984aa15acef652a056e70aebda525_crop_north.jpg?1582758325&w=3072&h=2048",
     ],
     idx: 0,
   };
@@ -44,7 +44,7 @@ class ImageSlider extends Component {
           <Button color="primary" onClick={this.handlePrevious}>
             Previous
           </Button>
-          <Image alt="Jimmy G" src={this.state.images[this.state.idx]} />
+          <Image alt="49er player" src={this.state.images[this.state.idx]} />
           <Button color="primary" onClick={this.handleNext}>
             Next
           </Button>

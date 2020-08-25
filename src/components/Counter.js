@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Button from "../elements/Button";
+
 class Counter extends Component {
   /**
   Please note: If you're only using the constructor to only initialize the state,
@@ -33,8 +35,12 @@ class Counter extends Component {
     return (
       <div>
         <div>Count: {this.state.count}</div>
-        <button onClick={this.incrementCount}>Increment</button>
-        <button onClick={this.decrementCount}>Decrement</button>
+        <Button color="primary" onClick={this.incrementCount}>
+          Increment
+        </Button>
+        <Button color="primary" onClick={this.decrementCount}>
+          Decrement
+        </Button>
       </div>
     );
   }

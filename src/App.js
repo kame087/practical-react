@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GlobalStyle from "./globalStyles";
+import { ThemeProvider } from "styled-components";
 
 import "./App.css";
 
@@ -7,6 +8,13 @@ import "./App.css";
 import Body from "./components/Body";
 import Counter from "./components/Counter";
 import ImageSlider from "./components/ImageSlider";
+
+import Button from "./elements/Button";
+
+const theme = {
+  primary: "red",
+  secondary: "gold",
+};
 
 class App extends Component {
   state = {
@@ -27,18 +35,21 @@ class App extends Component {
     return (
       <div className="App">
         <GlobalStyle />
-        {/* <Header
+        <ThemeProvider theme={theme}>
+          {/* <Header
           title="Hello from App"
           myObj={{
             a: 5,
             b: 6,
           }}
         /> */}
+          {/* Conditionally rendering components this way will affect the component lifecycle, these components are mounting and unmounting, which resets the state  */}
+          {/* This method below by using css, will maintain the state and not call the componentDidMount/componenetUnmount methods*/}
+          <div style={!this.state.visible ? { display: "none" } : {}}>
+            <ImageSlider />
+          </div>
 
-        {this.state.visible ? (
-          <ImageSlider />
-        ) : (
-          <div>
+          <div style={this.state.visible ? { display: "none" } : {}}>
             <Body
               family={["Kevin", "Sophia", "Sage", "Judah"]}
               myFunc={add}
@@ -47,8 +58,10 @@ class App extends Component {
             />
             <Counter initialCount={33} />
           </div>
-        )}
-        <button onClick={this.toggle}>{buttonText}</button>
+          <Button color="primary" onClick={this.toggle}>
+            {buttonText}
+          </Button>
+        </ThemeProvider>
       </div>
     );
   }
