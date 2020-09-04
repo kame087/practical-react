@@ -8,6 +8,7 @@ import "./App.css";
 import Body from "./components/Body";
 import Counter from "./components/Counter";
 import ImageSlider from "./components/ImageSlider";
+import Form from "./components/Form";
 
 import Button from "./elements/Button";
 
@@ -61,6 +62,7 @@ class App extends Component {
           <Button color="primary" onClick={this.toggle}>
             {buttonText}
           </Button>
+          <Form></Form>
         </ThemeProvider>
       </div>
     );
