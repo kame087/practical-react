@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { FormDiv } from "./style";
+import { FormDiv, FormButton } from "./style";
 
 export default class Form extends Component {
   state = {
@@ -63,7 +63,7 @@ export default class Form extends Component {
           <option>Dr.</option>
           <option>Mr.</option>
         </select>
-        <button onClick={this.handleSubmit}>Submit</button>
+        <FormButton onClick={this.handleSubmit}>Submit</FormButton>
       </FormDiv>
     );
   }
