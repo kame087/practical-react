@@ -9,6 +9,7 @@ import Body from "./components/Body";
 import Counter from "./components/Counter";
 import ImageSlider from "./components/ImageSlider";
 import Form from "./components/Form";
+import CyclicCounter from "./components/CyclicCounter";
 
 import Button from "./elements/Button";
 
@@ -63,6 +64,7 @@ class App extends Component {
             {buttonText}
           </Button>
           <Form></Form>
+          <CyclicCounter></CyclicCounter>
         </ThemeProvider>
       </div>
     );
