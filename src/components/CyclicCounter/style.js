@@ -19,4 +19,8 @@ export const CyclicButton = styled.button`
   cursor: pointer;
   box-shadow: 3px 3px rgba(0, 128, 0, 0.3);
   outline: none;
+
+  &:active {
+    transform: translateY(3px);
+  }
 `;
